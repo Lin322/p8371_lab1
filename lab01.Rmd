@@ -1,0 +1,22 @@
+---
+title: "Untitled"
+output: github_document
+---
+
+#Importing census data using apis
+```{r, setup}
+#install.packages("tidycensus")
+library(tidyverse)
+library(tidycensus)
+
+# census_api_key("4c941d90ace64dbbac7aedd0a0c859afa08b2d0d", install = TRUE)
+# Is it necessary to include "install = TRUE"? 
+
+```
+
+```{r, census_data}
+census_data = load_variables(2018, "acs5", cache = T)
+
+
+```
+
